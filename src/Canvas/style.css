@@ -1,0 +1,28 @@
+.Canvas-main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+}
+
+.Canvas-area {
+  border: 1px solid #f00;
+  margin: 1rem 0;
+}
+
+.Canvas-button {
+  background-color: #fff;
+  border: 1px solid #2c2c2c;
+  border-radius: 4px;
+  color: #2c2c2c;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.Canvas-button:hover {
+  background-color: #efefef;
+}

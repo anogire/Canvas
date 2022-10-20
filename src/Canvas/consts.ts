@@ -1,0 +1,9 @@
+export const offset = 200;
+export const scale = window.devicePixelRatio;
+export const canvasWidth = Math.floor((window.innerWidth - offset) * scale);
+export const canvasHeight = Math.floor((window.innerHeight - offset) * scale);
+export const canvasStyleWidth = `${window.innerWidth - offset}px`;
+export const canvasStyleHeight = `${window.innerHeight - offset}px`;
+export const mainColor = "#2c2c2c";
+export const backColor = "#fff";
+export const extraColor = "#f00";
