@@ -4,6 +4,7 @@ import { backColor, canvasHeight, canvasWidth, extraColor, mainColor, scale, can
 
 const drawLine = (ctx: CanvasRenderingContext2D, location: Line) => {
   ctx.save();
+  ctx.scale(scale, scale);
   ctx.beginPath();
   ctx.strokeStyle = mainColor;
   ctx.lineWidth = 1;
@@ -16,6 +17,7 @@ const drawLine = (ctx: CanvasRenderingContext2D, location: Line) => {
 
 const drawIntersection = (ctx: CanvasRenderingContext2D, location: Point) => {
   ctx.save();
+  ctx.scale(scale, scale);
   ctx.beginPath();
   ctx.arc(location.x!, location.y!, 4, 0, 2 * Math.PI, false);
   ctx.fillStyle = extraColor;
@@ -38,6 +40,7 @@ const collapseLine = (ctx: CanvasRenderingContext2D, location: Line) => {
     }
 
     ctx.save();
+    ctx.scale(scale, scale);
 
     ctx.beginPath();
     ctx.strokeStyle = backColor;
@@ -80,7 +83,7 @@ export function useCanvas() {
     if (!ctx) {
       return;
     }
-    ctx.scale(scale, scale);
+
     ctx.clearRect(0, 0, canvasWidth, canvasHeight);
 
     Object.keys(area.lines!).forEach(el => {
